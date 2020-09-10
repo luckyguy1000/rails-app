@@ -62,5 +62,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Error tracking
 gem 'sentry-raven'
 
+# Code coverage
+gem 'simplecov', require: false, group: :test
+
 # Pagination
 gem 'kaminari'
