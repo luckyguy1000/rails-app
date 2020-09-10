@@ -1,5 +1,9 @@
 <h1>New Post</h1>
 
+<hr/>
+
 <%= render 'form', post: @post %>
 
-<%= link_to 'Back', posts_path %>
+<div class="float-right">
+  <%= link_to 'Back', posts_path %>
+</div>

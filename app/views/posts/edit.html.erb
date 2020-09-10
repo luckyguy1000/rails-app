@@ -1,6 +1,10 @@
 <h1>Editing Post</h1>
 
+<hr/>
+
 <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<div class="float-right">
+  <%= link_to 'Show', @post %> |
+  <%= link_to 'Back', posts_path %>
+</div>
