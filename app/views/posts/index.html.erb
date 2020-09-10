@@ -2,6 +2,10 @@
 
 <h1>Posts</h1>
 
+<%= link_to 'New Post', new_post_path %>
+
+<hr/>
+
 <table>
   <thead>
     <tr>
@@ -24,6 +28,4 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+<%= paginate @posts %>
