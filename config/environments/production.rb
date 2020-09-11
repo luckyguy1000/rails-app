@@ -95,5 +95,6 @@ Rails.application.configure do
   # Sentry error tracking
   Raven.configure do |config|
     config.dsn = 'https://5add24f96d3042cb84ba0ba5235368ad@o282080.ingest.sentry.io/5289212'
+    config.environments = %w[ production ]
   end
 end

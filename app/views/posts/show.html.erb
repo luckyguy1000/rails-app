@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<h1>Post</h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
+<hr/>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<h3><%= @post.title %></h3>
+
+<div class="post-description">
+  <%= simple_format @post.description %>
+</div>
+
+<div class="float-right">
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Back', posts_path %>
+</div>
