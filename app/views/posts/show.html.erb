@@ -12,5 +12,18 @@
 
 <div class="float-right">
   <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %> |
   <%= link_to 'Back', posts_path %>
+</div>
+
+<div class="post-comments">
+  <h3>Comments</h3>
+
+  <% if @comments.any? %>
+    <ul class="comments-list">
+      <%= render @comments %>
+    </ul>
+  <% end %>
+
+  <%= render 'comments/form', post: @post %>
 </div>

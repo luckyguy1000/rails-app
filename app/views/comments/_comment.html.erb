@@ -1,0 +1,13 @@
+<li id="<%= comment.to_anchor %>" class="comment-row">
+  <div class="comment-content">
+    <div class="comment-header">
+      <span class="comment-id">
+        <%= link_to comment.to_anchor, post_path(@post, anchor: comment.to_anchor) %>; <%= comment.created_at %>
+      </span>
+
+      <%= link_to 'Destroy', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'float-right' %>
+    </div>
+
+    <%= simple_format comment.content %>
+  </div>
+</li>
