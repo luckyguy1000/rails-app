@@ -14,3 +14,14 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+window.onload = function() {
+  document.body.addEventListener('keydown', function(e) {
+    if(!(e.keyCode == 13 && e.metaKey)) return;
+
+    var target = e.target;
+    if(target.form) {
+      target.form.submit();
+    }
+  });
+}
