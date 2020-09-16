@@ -2,10 +2,13 @@ class CommentsController < ApplicationController
   before_action :set_post
 
   def create
-    if comment = @post.comments.create(comment_params)
+    comment = @post.comments.create(comment_params)
+
+    if comment.persisted?
       redirect_to post_path(@post, anchor: comment.to_anchor), notice: 'Comment added'
     else
-      redirect_to @post, notice: 'Error happened'
+      error_message = comment.errors.full_messages.first || 'Error happened'
+      redirect_to @post, alert: error_message
     end
   end
 

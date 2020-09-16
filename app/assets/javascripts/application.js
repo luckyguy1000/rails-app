@@ -12,10 +12,10 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
 
-window.onload = function() {
+function initApp() {
+  // Submit on Cmd + Enter
   document.body.addEventListener('keydown', function(e) {
     if(!(e.keyCode == 13 && e.metaKey)) return;
 
@@ -24,4 +24,15 @@ window.onload = function() {
       target.form.submit();
     }
   });
+
+  // Show how many characters left for large comments
+  document.getElementById('comment_content').onkeyup = function () {
+    var left = 3000 - this.value.length;
+
+    if(left < 2000) {
+      document.getElementById('count').innerHTML = "Characters left: " + left;
+    }
+  };
 }
+
+window.onload = initApp;

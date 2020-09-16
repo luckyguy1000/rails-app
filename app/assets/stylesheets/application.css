@@ -22,3 +22,9 @@
 .float-right {
   float: right;
 }
+
+
+#alert {
+  color: red;
+}
+
