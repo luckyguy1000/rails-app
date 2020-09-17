@@ -11,6 +11,14 @@
 
   <body>
     <div class="container">
+      <% if notice.present? %>
+        <p id="notice"><%= notice %></p>
+      <% end %>
+
+      <% if alert.present? %>
+        <p id="alert"><%= alert %></p>
+      <% end %>
+
       <%= yield %>
     </div>
 
