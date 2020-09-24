@@ -26,6 +26,7 @@ module "db" {
   instance_type                   = "db.r4.large"
   apply_immediately               = true
   publicly_accessible             = true
+  username                        = "postgres"
 
   tags                            = {
     Environment = "dev"
