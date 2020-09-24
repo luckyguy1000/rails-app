@@ -23,7 +23,10 @@ module "db" {
 
   replica_count                   = 1
   allowed_cidr_blocks             = ["0.0.0.0/0"]
-  instance_type                   = "db.r4.large"
+
+  # Change to something more production oriented like db.r4.large
+  instance_type                   = "db.t3.medium"
+
   apply_immediately               = true
   publicly_accessible             = true
   username                        = "postgres"
