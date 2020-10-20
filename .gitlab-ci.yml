@@ -176,4 +176,4 @@ infrastructure:
     include: 'terraform/ci.yml'
   only:
     changes:
-      - terraform/
+      - terraform/*
