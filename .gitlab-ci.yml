@@ -173,4 +173,7 @@ include:
 
 infrastructure:
   trigger:
-    include: 'terraform/rds.yml'
+    include: 'terraform/ci.yml'
+  only:
+    changes:
+      - terraform/
