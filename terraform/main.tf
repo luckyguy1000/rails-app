@@ -46,7 +46,7 @@ module "db" {
   source  = "terraform-aws-modules/rds/aws"
   version = "~> 2.0"
 
-  identifier = "production-db"
+  identifier = "production-db-pg"
 
   engine              = "postgres"
   engine_version      = "11.6"
