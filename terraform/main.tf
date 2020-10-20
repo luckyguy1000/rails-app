@@ -50,7 +50,7 @@ module "db" {
 
   engine              = "postgres"
   engine_version      = "11.6"
-  instance_class      = "db.t1.micro"
+  instance_class      = "db.t2.micro"
 
   name                = var.name
   username            = var.username
