@@ -179,6 +179,7 @@ infrastructure:
 
 waypoint:
   image: docker:latest
+  when: manual
   stage: build
   services:
     - docker:dind
